@@ -1,12 +1,13 @@
 
 import './playground.scss'
+
+import { createStage } from '../../helpers/gameHelpers'
 // components
 import Stage from '../Stage'
 import StartButton from '../StartButton'
 import Display from '../Display/Display'
 
 export default function Playground () {
-  const blockTypes = ['L', 'J', 'I', '0', 'S', 'T', 'Z']
   return (
     <>
       <aside>
@@ -18,7 +19,9 @@ export default function Playground () {
         <StartButton />
       </aside>
       <main>
-        <div className='playgroundContainer' />
+        <div className='playgroundContainer'>
+          <Stage stage={createStage()} />
+        </div>
       </main>
     </>
   )
