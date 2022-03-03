@@ -1,7 +1,7 @@
 import './startButton.scss'
 
-export default function StartButton () {
+export default function StartButton ({ callback }) {
   return (
-    <button>Start game</button>
+    <button onClick={callback}>Start game</button>
   )
 }
