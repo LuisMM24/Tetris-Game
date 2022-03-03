@@ -1,6 +1,8 @@
+import { StyledCell } from './StyledCell'
+import { TETROMINOS } from '../../helpers/tetrominos'
 
 export default function Cell ({ type }) {
   return (
-    <div className={type} />
+    <StyledCell type='L' color={TETROMINOS.L.color} />
   )
 }
